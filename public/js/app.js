@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1908,6 +1920,24 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@/api/article'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@/directive/waves'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@/utils'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/Pagination'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
+
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -1924,9 +1954,453 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+ // Waves directive
+
+
+ // Secondary package based on el-pagination
+
+var calendarTypeOptions = [{
+  key: 'CN',
+  display_name: 'China'
+}, {
+  key: 'US',
+  display_name: 'USA'
+}, {
+  key: 'JA',
+  display_name: 'Japan'
+}, {
+  key: 'VI',
+  display_name: 'Vietnam'
+}]; // arr to obj ,such as { CN : "China", US : "USA" }
+
+var calendarTypeKeyValue = calendarTypeOptions.reduce(function (acc, cur) {
+  acc[cur.key] = cur.display_name;
+  return acc;
+}, {});
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  name: 'ComplexTable',
+  components: {
+    Pagination: !(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/Pagination'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+  },
+  directives: {
+    waves: !(function webpackMissingModule() { var e = new Error("Cannot find module '@/directive/waves'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+  },
+  filters: {
+    statusFilter: function statusFilter(status) {
+      var statusMap = {
+        published: 'success',
+        draft: 'info',
+        deleted: 'danger'
+      };
+      return statusMap[status];
+    },
+    typeFilter: function typeFilter(type) {
+      return calendarTypeKeyValue[type];
+    }
+  },
+  data: function data() {
+    return {
+      tableKey: 0,
+      list: null,
+      total: 0,
+      listLoading: true,
+      listQuery: {
+        page: 1,
+        limit: 20,
+        importance: undefined,
+        title: undefined,
+        type: undefined,
+        sort: '+id'
+      },
+      importanceOptions: [1, 2, 3],
+      calendarTypeOptions: calendarTypeOptions,
+      sortOptions: [{
+        label: 'ID Ascending',
+        key: '+id'
+      }, {
+        label: 'ID Descending',
+        key: '-id'
+      }],
+      statusOptions: ['published', 'draft', 'deleted'],
+      showReviewer: false,
+      temp: {
+        id: undefined,
+        importance: 1,
+        remark: '',
+        timestamp: new Date(),
+        title: '',
+        type: '',
+        status: 'published'
+      },
+      dialogFormVisible: false,
+      dialogStatus: '',
+      textMap: {
+        update: 'Edit',
+        create: 'Create'
+      },
+      dialogPvVisible: false,
+      pvData: [],
+      rules: {
+        type: [{
+          required: true,
+          message: 'type is required',
+          trigger: 'change'
+        }],
+        timestamp: [{
+          type: 'date',
+          required: true,
+          message: 'timestamp is required',
+          trigger: 'change'
+        }],
+        title: [{
+          required: true,
+          message: 'title is required',
+          trigger: 'blur'
+        }]
+      },
+      downloadLoading: false
+    };
+  },
+  created: function created() {
+    this.getList();
+  },
+  methods: {
+    getList: function getList() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var _yield$fetchList, data;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this.listLoading = true;
+                _context.next = 3;
+                return !(function webpackMissingModule() { var e = new Error("Cannot find module '@/api/article'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_this.listQuery);
+
+              case 3:
+                _yield$fetchList = _context.sent;
+                data = _yield$fetchList.data;
+                _this.list = data.items;
+                _this.total = data.total; // Just to simulate the time of the request
+
+                _this.listLoading = false;
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    handleFilter: function handleFilter() {
+      this.listQuery.page = 1;
+      this.getList();
+    },
+    handleModifyStatus: function handleModifyStatus(row, status) {
+      this.$message({
+        message: 'Successful operation',
+        type: 'success'
+      });
+      row.status = status;
+    },
+    sortChange: function sortChange(data) {
+      var prop = data.prop,
+          order = data.order;
+
+      if (prop === 'id') {
+        this.sortByID(order);
+      }
+    },
+    sortByID: function sortByID(order) {
+      if (order === 'ascending') {
+        this.listQuery.sort = '+id';
+      } else {
+        this.listQuery.sort = '-id';
+      }
+
+      this.handleFilter();
+    },
+    resetTemp: function resetTemp() {
+      this.temp = {
+        id: undefined,
+        importance: 1,
+        remark: '',
+        timestamp: new Date(),
+        title: '',
+        status: 'published',
+        type: ''
+      };
+    },
+    handleCreate: function handleCreate() {
+      var _this2 = this;
+
+      this.resetTemp();
+      this.dialogStatus = 'create';
+      this.dialogFormVisible = true;
+      this.$nextTick(function () {
+        _this2.$refs['dataForm'].clearValidate();
+      });
+    },
+    createData: function createData() {
+      var _this3 = this;
+
+      this.$refs['dataForm'].validate(function (valid) {
+        if (valid) {
+          _this3.temp.id = parseInt(Math.random() * 100) + 1024; // mock a id
+
+          _this3.temp.author = 'laravue';
+          !(function webpackMissingModule() { var e = new Error("Cannot find module '@/api/article'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_this3.temp).then(function () {
+            _this3.list.unshift(_this3.temp);
+
+            _this3.dialogFormVisible = false;
+
+            _this3.$notify({
+              title: 'Success',
+              message: 'Created successfully',
+              type: 'success',
+              duration: 2000
+            });
+          });
+        }
+      });
+    },
+    handleUpdate: function handleUpdate(row) {
+      var _this4 = this;
+
+      this.temp = Object.assign({}, row); // copy obj
+
+      this.temp.timestamp = new Date(this.temp.timestamp);
+      this.dialogStatus = 'update';
+      this.dialogFormVisible = true;
+      this.$nextTick(function () {
+        _this4.$refs['dataForm'].clearValidate();
+      });
+    },
+    updateData: function updateData() {
+      var _this5 = this;
+
+      this.$refs['dataForm'].validate(function (valid) {
+        if (valid) {
+          var tempData = Object.assign({}, _this5.temp);
+          tempData.timestamp = +new Date(tempData.timestamp); // change Thu Nov 30 2017 16:41:05 GMT+0800 (CST) to 1512031311464
+
+          !(function webpackMissingModule() { var e = new Error("Cannot find module '@/api/article'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(tempData).then(function () {
+            var _iterator = _createForOfIteratorHelper(_this5.list),
+                _step;
+
+            try {
+              for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                var v = _step.value;
+
+                if (v.id === _this5.temp.id) {
+                  var index = _this5.list.indexOf(v);
+
+                  _this5.list.splice(index, 1, _this5.temp);
+
+                  break;
+                }
+              }
+            } catch (err) {
+              _iterator.e(err);
+            } finally {
+              _iterator.f();
+            }
+
+            _this5.dialogFormVisible = false;
+
+            _this5.$notify({
+              title: 'Success',
+              message: 'Updated successfully',
+              type: 'success',
+              duration: 2000
+            });
+          });
+        }
+      });
+    },
+    handleDelete: function handleDelete(row) {
+      this.$notify({
+        title: 'Success',
+        message: 'Deleted successfully',
+        type: 'success',
+        duration: 2000
+      });
+      var index = this.list.indexOf(row);
+      this.list.splice(index, 1);
+    },
+    handleFetchPv: function handleFetchPv(pv) {
+      var _this6 = this;
+
+      !(function webpackMissingModule() { var e = new Error("Cannot find module '@/api/article'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(pv).then(function (response) {
+        _this6.pvData = response.data.pvData;
+        _this6.dialogPvVisible = true;
+      });
+    },
+    handleDownload: function handleDownload() {
+      var _this7 = this;
+
+      this.downloadLoading = true;
+      Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module '@/vendor/Export2Excel'"); e.code = 'MODULE_NOT_FOUND'; throw e; }).then(function (excel) {
+        var tHeader = ['timestamp', 'title', 'type', 'importance', 'status'];
+        var filterVal = ['timestamp', 'title', 'type', 'importance', 'status'];
+
+        var data = _this7.formatJson(filterVal, _this7.list);
+
+        excel.export_json_to_excel({
+          header: tHeader,
+          data: data,
+          filename: 'table-list'
+        });
+        _this7.downloadLoading = false;
+      });
+    },
+    formatJson: function formatJson(filterVal, jsonData) {
+      return jsonData.map(function (v) {
+        return filterVal.map(function (j) {
+          if (j === 'timestamp') {
+            return !(function webpackMissingModule() { var e = new Error("Cannot find module '@/utils'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(v[j]);
+          } else {
+            return v[j];
+          }
+        });
+      });
+    }
   }
 });
 
@@ -37288,6 +37762,746 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/setimmediate/setImmediate.js":
 /*!***************************************************!*\
   !*** ./node_modules/setimmediate/setImmediate.js ***!
@@ -37576,32 +38790,798 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
+  return _c(
+    "div",
+    { staticClass: "app-container" },
+    [
+      _c(
+        "div",
+        { staticClass: "filter-container" },
+        [
+          _c("el-input", {
+            staticClass: "filter-item",
+            staticStyle: { width: "200px" },
+            attrs: { placeholder: _vm.$t("table.title") },
+            nativeOn: {
+              keyup: function($event) {
+                if (
+                  !$event.type.indexOf("key") &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.handleFilter($event)
+              }
+            },
+            model: {
+              value: _vm.listQuery.title,
+              callback: function($$v) {
+                _vm.$set(_vm.listQuery, "title", $$v)
+              },
+              expression: "listQuery.title"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "el-select",
+            {
+              staticClass: "filter-item",
+              staticStyle: { width: "90px" },
+              attrs: { placeholder: _vm.$t("table.importance"), clearable: "" },
+              model: {
+                value: _vm.listQuery.importance,
+                callback: function($$v) {
+                  _vm.$set(_vm.listQuery, "importance", $$v)
+                },
+                expression: "listQuery.importance"
+              }
+            },
+            _vm._l(_vm.importanceOptions, function(item) {
+              return _c("el-option", {
+                key: item,
+                attrs: { label: item, value: item }
+              })
+            }),
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-select",
+            {
+              staticClass: "filter-item",
+              staticStyle: { width: "130px" },
+              attrs: { placeholder: _vm.$t("table.type"), clearable: "" },
+              model: {
+                value: _vm.listQuery.type,
+                callback: function($$v) {
+                  _vm.$set(_vm.listQuery, "type", $$v)
+                },
+                expression: "listQuery.type"
+              }
+            },
+            _vm._l(_vm.calendarTypeOptions, function(item) {
+              return _c("el-option", {
+                key: item.key,
+                attrs: {
+                  label: item.display_name + "(" + item.key + ")",
+                  value: item.key
+                }
+              })
+            }),
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-select",
+            {
+              staticClass: "filter-item",
+              staticStyle: { width: "140px" },
+              on: { change: _vm.handleFilter },
+              model: {
+                value: _vm.listQuery.sort,
+                callback: function($$v) {
+                  _vm.$set(_vm.listQuery, "sort", $$v)
+                },
+                expression: "listQuery.sort"
+              }
+            },
+            _vm._l(_vm.sortOptions, function(item) {
+              return _c("el-option", {
+                key: item.key,
+                attrs: { label: item.label, value: item.key }
+              })
+            }),
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-button",
+            {
+              directives: [{ name: "waves", rawName: "v-waves" }],
+              staticClass: "filter-item",
+              attrs: { type: "primary", icon: "el-icon-search" },
+              on: { click: _vm.handleFilter }
+            },
+            [_vm._v("\n      " + _vm._s(_vm.$t("table.search")) + "\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "el-button",
+            {
+              staticClass: "filter-item",
+              staticStyle: { "margin-left": "10px" },
+              attrs: { type: "primary", icon: "el-icon-edit" },
+              on: { click: _vm.handleCreate }
+            },
+            [_vm._v("\n      " + _vm._s(_vm.$t("table.add")) + "\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "el-button",
+            {
+              directives: [{ name: "waves", rawName: "v-waves" }],
+              staticClass: "filter-item",
+              attrs: {
+                loading: _vm.downloadLoading,
+                type: "primary",
+                icon: "el-icon-download"
+              },
+              on: { click: _vm.handleDownload }
+            },
+            [_vm._v("\n      " + _vm._s(_vm.$t("table.export")) + "\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "el-checkbox",
+            {
+              staticClass: "filter-item",
+              staticStyle: { "margin-left": "15px" },
+              on: {
+                change: function($event) {
+                  _vm.tableKey = _vm.tableKey + 1
+                }
+              },
+              model: {
+                value: _vm.showReviewer,
+                callback: function($$v) {
+                  _vm.showReviewer = $$v
+                },
+                expression: "showReviewer"
+              }
+            },
+            [_vm._v("\n      " + _vm._s(_vm.$t("table.reviewer")) + "\n    ")]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-table",
+        {
+          directives: [
+            {
+              name: "loading",
+              rawName: "v-loading",
+              value: _vm.listLoading,
+              expression: "listLoading"
+            }
+          ],
+          key: _vm.tableKey,
+          staticStyle: { width: "100%" },
+          attrs: {
+            data: _vm.list,
+            border: "",
+            fit: "",
+            "highlight-current-row": ""
+          },
+          on: { "sort-change": _vm.sortChange }
+        },
+        [
+          _c("el-table-column", {
+            attrs: {
+              label: _vm.$t("table.id"),
+              prop: "id",
+              sortable: "custom",
+              align: "center",
+              width: "80"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [_c("span", [_vm._v(_vm._s(scope.row.id))])]
+                }
+              }
             ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              label: _vm.$t("table.date"),
+              width: "150px",
+              align: "center"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c("span", [
+                      _vm._v(
+                        _vm._s(
+                          _vm._f("parseTime")(
+                            scope.row.timestamp,
+                            "{y}-{m}-{d} {h}:{i}"
+                          )
+                        )
+                      )
+                    ])
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: _vm.$t("table.title"), "min-width": "150px" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(ref) {
+                  var row = ref.row
+                  return [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "link-type",
+                        on: {
+                          click: function($event) {
+                            return _vm.handleUpdate(row)
+                          }
+                        }
+                      },
+                      [_vm._v(_vm._s(row.title))]
+                    ),
+                    _vm._v(" "),
+                    _c("el-tag", [
+                      _vm._v(_vm._s(_vm._f("typeFilter")(row.type)))
+                    ])
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              label: _vm.$t("table.author"),
+              width: "110px",
+              align: "center"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [_c("span", [_vm._v(_vm._s(scope.row.author))])]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _vm.showReviewer
+            ? _c("el-table-column", {
+                attrs: {
+                  label: _vm.$t("table.reviewer"),
+                  width: "110px",
+                  align: "center"
+                },
+                scopedSlots: _vm._u(
+                  [
+                    {
+                      key: "default",
+                      fn: function(scope) {
+                        return [
+                          _c("span", { staticStyle: { color: "red" } }, [
+                            _vm._v(_vm._s(scope.row.reviewer))
+                          ])
+                        ]
+                      }
+                    }
+                  ],
+                  null,
+                  false,
+                  295318502
+                )
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: _vm.$t("table.importance"), width: "80px" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return _vm._l(+scope.row.importance, function(n) {
+                    return _c("svg-icon", {
+                      key: n,
+                      staticClass: "meta-item__icon",
+                      attrs: { "icon-class": "star" }
+                    })
+                  })
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              label: _vm.$t("table.readings"),
+              align: "center",
+              width: "95"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(ref) {
+                  var row = ref.row
+                  return [
+                    row.pageviews
+                      ? _c(
+                          "span",
+                          {
+                            staticClass: "link-type",
+                            on: {
+                              click: function($event) {
+                                return _vm.handleFetchPv(row.pageviews)
+                              }
+                            }
+                          },
+                          [_vm._v(_vm._s(row.pageviews))]
+                        )
+                      : _c("span", [_vm._v("0")])
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              label: _vm.$t("table.status"),
+              "class-name": "status-col",
+              width: "100"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(ref) {
+                  var row = ref.row
+                  return [
+                    _c(
+                      "el-tag",
+                      { attrs: { type: _vm._f("statusFilter")(row.status) } },
+                      [
+                        _vm._v(
+                          "\n          " + _vm._s(row.status) + "\n        "
+                        )
+                      ]
+                    )
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              label: _vm.$t("table.actions"),
+              align: "center",
+              width: "230",
+              "class-name": "small-padding fixed-width"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(ref) {
+                  var row = ref.row
+                  return [
+                    _c(
+                      "el-button",
+                      {
+                        attrs: { type: "primary", size: "mini" },
+                        on: {
+                          click: function($event) {
+                            return _vm.handleUpdate(row)
+                          }
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n          " +
+                            _vm._s(_vm.$t("table.edit")) +
+                            "\n        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    row.status != "published"
+                      ? _c(
+                          "el-button",
+                          {
+                            attrs: { size: "mini", type: "success" },
+                            on: {
+                              click: function($event) {
+                                return _vm.handleModifyStatus(row, "published")
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n          " +
+                                _vm._s(_vm.$t("table.publish")) +
+                                "\n        "
+                            )
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    row.status != "draft"
+                      ? _c(
+                          "el-button",
+                          {
+                            attrs: { size: "mini" },
+                            on: {
+                              click: function($event) {
+                                return _vm.handleModifyStatus(row, "draft")
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n          " +
+                                _vm._s(_vm.$t("table.draft")) +
+                                "\n        "
+                            )
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    row.status != "deleted"
+                      ? _c(
+                          "el-button",
+                          {
+                            attrs: { size: "mini", type: "danger" },
+                            on: {
+                              click: function($event) {
+                                return _vm.handleModifyStatus(row, "deleted")
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n          " +
+                                _vm._s(_vm.$t("table.delete")) +
+                                "\n        "
+                            )
+                          ]
+                        )
+                      : _vm._e()
+                  ]
+                }
+              }
+            ])
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("pagination", {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.total > 0,
+            expression: "total>0"
+          }
+        ],
+        attrs: {
+          total: _vm.total,
+          page: _vm.listQuery.page,
+          limit: _vm.listQuery.limit
+        },
+        on: {
+          "update:page": function($event) {
+            return _vm.$set(_vm.listQuery, "page", $event)
+          },
+          "update:limit": function($event) {
+            return _vm.$set(_vm.listQuery, "limit", $event)
+          },
+          pagination: _vm.getList
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "el-dialog",
+        {
+          attrs: {
+            title: _vm.textMap[_vm.dialogStatus],
+            visible: _vm.dialogFormVisible
+          },
+          on: {
+            "update:visible": function($event) {
+              _vm.dialogFormVisible = $event
+            }
+          }
+        },
+        [
+          _c(
+            "el-form",
+            {
+              ref: "dataForm",
+              staticStyle: { width: "400px", "margin-left": "50px" },
+              attrs: {
+                rules: _vm.rules,
+                model: _vm.temp,
+                "label-position": "left",
+                "label-width": "70px"
+              }
+            },
+            [
+              _c(
+                "el-form-item",
+                { attrs: { label: _vm.$t("table.type"), prop: "type" } },
+                [
+                  _c(
+                    "el-select",
+                    {
+                      staticClass: "filter-item",
+                      attrs: { placeholder: "Please select" },
+                      model: {
+                        value: _vm.temp.type,
+                        callback: function($$v) {
+                          _vm.$set(_vm.temp, "type", $$v)
+                        },
+                        expression: "temp.type"
+                      }
+                    },
+                    _vm._l(_vm.calendarTypeOptions, function(item) {
+                      return _c("el-option", {
+                        key: item.key,
+                        attrs: { label: item.display_name, value: item.key }
+                      })
+                    }),
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "el-form-item",
+                { attrs: { label: _vm.$t("table.date"), prop: "timestamp" } },
+                [
+                  _c("el-date-picker", {
+                    attrs: {
+                      type: "datetime",
+                      placeholder: "Please pick a date"
+                    },
+                    model: {
+                      value: _vm.temp.timestamp,
+                      callback: function($$v) {
+                        _vm.$set(_vm.temp, "timestamp", $$v)
+                      },
+                      expression: "temp.timestamp"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "el-form-item",
+                { attrs: { label: _vm.$t("table.title"), prop: "title" } },
+                [
+                  _c("el-input", {
+                    model: {
+                      value: _vm.temp.title,
+                      callback: function($$v) {
+                        _vm.$set(_vm.temp, "title", $$v)
+                      },
+                      expression: "temp.title"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "el-form-item",
+                { attrs: { label: _vm.$t("table.status") } },
+                [
+                  _c(
+                    "el-select",
+                    {
+                      staticClass: "filter-item",
+                      attrs: { placeholder: "Please select" },
+                      model: {
+                        value: _vm.temp.status,
+                        callback: function($$v) {
+                          _vm.$set(_vm.temp, "status", $$v)
+                        },
+                        expression: "temp.status"
+                      }
+                    },
+                    _vm._l(_vm.statusOptions, function(item) {
+                      return _c("el-option", {
+                        key: item,
+                        attrs: { label: item, value: item }
+                      })
+                    }),
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "el-form-item",
+                { attrs: { label: _vm.$t("table.importance") } },
+                [
+                  _c("el-rate", {
+                    staticStyle: { "margin-top": "8px" },
+                    attrs: {
+                      colors: ["#99A9BF", "#F7BA2A", "#FF9900"],
+                      max: 3
+                    },
+                    model: {
+                      value: _vm.temp.importance,
+                      callback: function($$v) {
+                        _vm.$set(_vm.temp, "importance", $$v)
+                      },
+                      expression: "temp.importance"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "el-form-item",
+                { attrs: { label: _vm.$t("table.remark") } },
+                [
+                  _c("el-input", {
+                    attrs: {
+                      autosize: { minRows: 2, maxRows: 4 },
+                      type: "textarea",
+                      placeholder: "Please input"
+                    },
+                    model: {
+                      value: _vm.temp.remark,
+                      callback: function($$v) {
+                        _vm.$set(_vm.temp, "remark", $$v)
+                      },
+                      expression: "temp.remark"
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dialog-footer",
+              attrs: { slot: "footer" },
+              slot: "footer"
+            },
+            [
+              _c(
+                "el-button",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.dialogFormVisible = false
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        " + _vm._s(_vm.$t("table.cancel")) + "\n      "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "el-button",
+                {
+                  attrs: { type: "primary" },
+                  on: {
+                    click: function($event) {
+                      _vm.dialogStatus === "create"
+                        ? _vm.createData()
+                        : _vm.updateData()
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        " + _vm._s(_vm.$t("table.confirm")) + "\n      "
+                  )
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-dialog",
+        {
+          attrs: { visible: _vm.dialogPvVisible, title: "Reading statistics" },
+          on: {
+            "update:visible": function($event) {
+              _vm.dialogPvVisible = $event
+            }
+          }
+        },
+        [
+          _c(
+            "el-table",
+            {
+              staticStyle: { width: "100%" },
+              attrs: {
+                data: _vm.pvData,
+                border: "",
+                fit: "",
+                "highlight-current-row": ""
+              }
+            },
+            [
+              _c("el-table-column", {
+                attrs: { prop: "key", label: "Channel" }
+              }),
+              _vm._v(" "),
+              _c("el-table-column", { attrs: { prop: "pv", label: "Pv" } })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass: "dialog-footer",
+              attrs: { slot: "footer" },
+              slot: "footer"
+            },
+            [
+              _c(
+                "el-button",
+                {
+                  attrs: { type: "primary" },
+                  on: {
+                    click: function($event) {
+                      _vm.dialogPvVisible = false
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(_vm.$t("table.confirm")))]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
